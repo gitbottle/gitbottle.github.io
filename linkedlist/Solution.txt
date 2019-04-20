@@ -1,0 +1,20 @@
+I would like to add the additional lines of code to the Main. 
+
+while (!singlyList.isEmpty()) {
+	        if (!singlyList.first().isFinished()) {
+	        	singlyList.first().run(25);
+	        	singlyList.addLast(singlyList.removeFirst());
+	        }
+	        
+	        else {
+	        	singlyList.removeFirst();
+	        }
+        } 
+
+In round-robin scheduling, a task is visited more than once until the task is finished. This requires 
+a mechanism such as the rotate () method that allows the system to visit this task again and again in an 
+orderly fashion. Therefore, a circular data structure is most suitable for this. 
+No changes to the memory is made when CircularLinkedList's "rotate ()" method is called because tail variable 
+simply gets updated with the new memory address. On the other hand, in order to execute a similar pattern in 
+SinglyLinkedList, the first node need to be removed so it can be created at the end of the list.
+The same variable that I delete needs to be created again to be used. It is inefficient. 
